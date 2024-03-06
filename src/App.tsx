@@ -1,24 +1,28 @@
-import React from "react";
-import logo from "./logo.svg";
-import "./App.css";
+import React from 'react';
+import './App.css';
+
+const TeamCards = ['Card 1', 'Card 2', 'Card 3'];
+
+function HeadingIntro() {
+  return <h1>Welcome to March Madness!</h1>;
+}
+
+function TeamList() {
+  return (
+    <div>
+      <h2>#1: {TeamCards[0]}</h2>
+      <h2>#2: {TeamCards[1]}</h2>
+      <h2>#3: {TeamCards[2]}</h2>
+    </div>
+  );
+}
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <h1>Welcome to March Madness!</h1>
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <HeadingIntro />
+        <TeamList />
       </header>
     </div>
   );
